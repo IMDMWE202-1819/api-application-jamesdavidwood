@@ -3,8 +3,6 @@ package com.jamesdavidwood.appetisingbrew.controllers
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import com.beust.klaxon.Klaxon
 import com.jamesdavidwood.appetisingbrew.R
 import com.jamesdavidwood.appetisingbrew.adapters.BeerAdapter
@@ -15,9 +13,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val beer_url = "https://api.punkapi.com/v2/beers?page=1&per_page=80"
-    val beers = arrayListOf<PunkBrewData>()
-    val adapter = BeerAdapter(beers, this)
+    private val beerUrl = "https://api.punkapi.com/v2/beers?page=1&per_page=80"
+    private val beers = arrayListOf<PunkBrewData>()
+    private val adapter = BeerAdapter(beers, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +28,12 @@ class MainActivity : AppCompatActivity() {
         retrieveBeers()
     }
 
-    fun updateUI() {
+    private fun updateUI() {
         adapter.notifyDataSetChanged()
     }
 
-    fun retrieveBeers() {
-        async.get(beer_url, onResponse = {
+    private fun retrieveBeers() {
+        async.get(beerUrl, onResponse = {
             val results = Klaxon()
                 .converter(BeerCoverter())
                 .parseArray<PunkBrewData>(this.text)
