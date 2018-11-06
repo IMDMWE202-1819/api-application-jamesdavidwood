@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "597031282355",
+    "firebase_url": "https://appetisingbrew.firebaseio.com",
+    "project_id": "appetisingbrew",
+    "storage_bucket": "appetisingbrew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597031282355:android:bf86a23fb62347d9",
+        "android_client_info": {
+          "package_name": "com.jamesdavidwood.appetisingbrew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597031282355-nqicheqvcu7kjsqbfgccpffrbf8to7ki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jamesdavidwood.appetisingbrew",
+            "certificate_hash": "ee5c7a2e163d56a9ff9127409390858be731f8a3"
+          }
+        },
+        {
+          "client_id": "597031282355-2obpg3usl77ogcg3dlui6ic3cfls6gql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzGHC8Lg9CckCFbtwFza3jmDhUVLaAIGE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597031282355-2obpg3usl77ogcg3dlui6ic3cfls6gql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
