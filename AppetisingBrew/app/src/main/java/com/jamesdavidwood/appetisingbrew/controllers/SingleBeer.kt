@@ -20,7 +20,19 @@ class SingleBeer : AppCompatActivity() {
         Picasso.get().load(beer.image_url).into(SingleBeerImage)
         SingleBeerName.text = beer.name
         LongBeerDesc.text = beer.description
-        FirstBrewed.text = "first brewed: ${beer.first_brewed}"
+        FirstBrewed.text = "First brewed: ${beer.first_brewed}"
         BeerABV.text = "ABV: ${beer.abv.toString()}%"
+        Tagline.text = beer.tagline
+        IBU.text = "International Bitterness Unit: ${beer.ibu.toString()}"
+        TargetFG.text = "Target FG: ${beer.target_fg.toString()}"
+        TargetOG.text = "Target OG: ${beer.target_og.toString()}"
+        EBC.text = "EBC: ${beer.ebc.toString()}"
+        SRM.text = "SRM: ${beer.srm.toString()}"
+        PH.text = "PH: ${beer.ph.toString()}"
+        AttenuationLevel.text = "Attenuation Level: ${beer.attenuation_level.toString()}"
+        BrewersTips.text = "Brewers Tips: ${beer.brewers_tips}"
+        ContributedBy.text = "Contributed by: ${beer.contributed_by}"
+
+
     }
 }
