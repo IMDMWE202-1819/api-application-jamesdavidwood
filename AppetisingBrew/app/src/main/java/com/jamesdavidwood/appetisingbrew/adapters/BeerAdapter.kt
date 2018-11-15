@@ -11,7 +11,7 @@ import com.jamesdavidwood.appetisingbrew.R
 import com.jamesdavidwood.appetisingbrew.models.PunkBrewData
 import com.squareup.picasso.Picasso
 
-class BeerAdapter(private val beers: MutableList<PunkBrewData>, val context:Context): RecyclerView.Adapter<BeerAdapter.BeerHolder>() {
+class BeerAdapter(private val beers: MutableList<PunkBrewData>, val context:Context, val itemClick: (beer:PunkBrewData) -> Unit): RecyclerView.Adapter<BeerAdapter.BeerHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeerHolder {
         return BeerHolder(LayoutInflater.from(context).inflate(R.layout.beer_card, parent, false))
     }
@@ -32,6 +32,7 @@ class BeerAdapter(private val beers: MutableList<PunkBrewData>, val context:Cont
         fun bindBeer(beer: PunkBrewData) {
             beerName.text = beer.name
             Picasso.get().load(beer.image_url).into(beerImageView)
+            itemView.setOnClickListener{itemClick(beer)}
         }
     }
 }
